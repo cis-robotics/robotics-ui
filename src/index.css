@@ -1,0 +1,7 @@
+#root {
+    height: 100%;
+}
+
+.ui.celled.grid {
+    margin-top: 0;
+}

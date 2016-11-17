@@ -1,19 +1,28 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Grid } from 'semantic-ui-react'
+import Camera from './components/Camera'
+import SensorDisplay from './components/SensorDisplay'
+import PositionDisplay from './components/PositionDisplay'
 
 class App extends Component {
+
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Grid celled>
+        <Grid.Row>
+          <Grid.Column width={6}>
+            <PositionDisplay/>
+          </Grid.Column>
+          <Grid.Column width={10}>
+            <Camera/>
+          </Grid.Column>
+        </Grid.Row>
+        <Grid.Row>
+          <Grid.Column width={16}>
+            <SensorDisplay/>
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
     );
   }
 }
